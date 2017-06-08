@@ -8,6 +8,7 @@
             $ac_panel.removeClass('active');
         }
     });
+
     $('.increase-text').on('click', TextSize.IncreaseText);
     $('.decrease-text').on('click', TextSize.DecreaseText);
     $('.ac-high-contrast').on('click', Contrast.HighContrast);
@@ -21,6 +22,7 @@
             $('#ac_component.ac-container').addClass('active');
         }
     });
+
     $(document).on('blur', '#ac_component > *', function () { $('#ac_component.ac-container').removeClass('active') });
 });
 var Component = {
@@ -147,4 +149,3 @@ var Tooltip = {
         $this.removeClass('active');
     },
 };
-////////
