@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html data-contrast="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/ac-component.css" rel="stylesheet" />
+    <script src="~/Scripts/ac.component.js"></script>
+    <!-- CSS ACCESSIBILITY COMPONENT -->
+    <link href="~/Content/ac-text-size.css" rel="stylesheet" />
+</head>
+<body>
+    @Html.Partial("~/Views/Partial/_AccessibiltyComponent.cshtml")
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li data-title="Home">@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li data-title="About">@Html.ActionLink("About", "About", "Home")</li>
+                    <li data-title="Contact">@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc malesuada nisl a varius maximus. Proin molestie facilisis magna, eget efficitur nisl ullamcorper sed. Aliquam at nunc at nulla luctus gravida sit amet sed diam. Ut porta leo id felis dapibus ornare. Vestibulum non enim diam. Etiam tempor urna purus, in pellentesque purus semper eu. Vivamus placerat cursus iaculis.
+                Maecenas porttitor, turpis eu accumsan gravida, arcu metus tempor elit, id tempor massa massa sit amet lectus. Maecenas ut rhoncus metus. Aenean pharetra velit magna, ut volutpat augue vestibulum at. Sed maximus at nisi quis fringilla. Fusce convallis risus dignissim odio malesuada finibus. Proin eget felis molestie, facilisis nisl eget, semper sapien. Cras tincidunt ipsum vel molestie accumsan. Donec vulputate, elit sed posuere pharetra, elit lorem consequat risus, et lobortis sem leo sed lectus. Nullam ac neque vitae arcu congue cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ullamcorper in ante in iaculis. Nulla ac felis feugiat, suscipit neque et, lacinia magna. Nunc aliquet sodales nulla eu rhoncus. Vivamus ut dui ac eros posuere ultricies ac quis risus. Aliquam erat volutpat. Nunc fringilla tristique aliquet.
+                Suspendisse potenti. Donec venenatis, libero eget pretium mattis, nibh ante elementum ante, vehicula auctor dui lectus quis velit. Nullam vitae sem varius, eleifend turpis eget, rutrum elit. Mauris erat nisi, accumsan in metus non, euismod pharetra ipsum. Aliquam ac nisl vel magna suscipit interdum. Nulla dictum ante id odio malesuada commodo. Maecenas accumsan accumsan turpis, feugiat consequat arcu efficitur a. Aenean ac turpis lorem. Mauris at ullamcorper enim. Pellentesque tempus consectetur laoreet. Fusce hendrerit enim ipsum, eget consectetur diam efficitur quis.
+                Integer gravida purus lacus, non consequat diam laoreet vel. Phasellus at eros nisi. Donec quis magna ipsum. Integer in augue tempor, facilisis est eget, sodales mauris. Pellentesque est lorem, mattis nec elementum sed, ultrices id magna. Vivamus ultricies vitae augue eget rhoncus. Quisque tincidunt lorem ex, eu facilisis purus mollis eu. Morbi ut imperdiet quam.
+                In ac ipsum sit amet sem rhoncus gravida quis vel orci. Sed tempor auctor metus non laoreet. Morbi tempor lorem a arcu pulvinar, id tempus dui consequat. Morbi pulvinar fermentum odio malesuada gravida. Suspendisse egestas neque non leo cursus porta sed nec ex. Morbi ultrices orci leo, commodo mattis felis cursus sit amet. Proin odio dolor, elementum sed porta sed, dapibus at est. Morbi lectus est, mattis ut ultrices vitae, iaculis commodo libero. Sed auctor est quis urna feugiat, vitae viverra tellus ultricies. Pellentesque elementum vitae est ac malesuada. Aenean aliquam tortor id arcu feugiat congue.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc malesuada nisl a varius maximus. Proin molestie facilisis magna, eget efficitur nisl ullamcorper sed. Aliquam at nunc at nulla luctus gravida sit amet sed diam. Ut porta leo id felis dapibus ornare. Vestibulum non enim diam. Etiam tempor urna purus, in pellentesque purus semper eu. Vivamus placerat cursus iaculis.
+                Maecenas porttitor, turpis eu accumsan gravida, arcu metus tempor elit, id tempor massa massa sit amet lectus. Maecenas ut rhoncus metus. Aenean pharetra velit magna, ut volutpat augue vestibulum at. Sed maximus at nisi quis fringilla. Fusce convallis risus dignissim odio malesuada finibus. Proin eget felis molestie, facilisis nisl eget, semper sapien. Cras tincidunt ipsum vel molestie accumsan. Donec vulputate, elit sed posuere pharetra, elit lorem consequat risus, et lobortis sem leo sed lectus. Nullam ac neque vitae arcu congue cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ullamcorper in ante in iaculis. Nulla ac felis feugiat, suscipit neque et, lacinia magna. Nunc aliquet sodales nulla eu rhoncus. Vivamus ut dui ac eros posuere ultricies ac quis risus. Aliquam erat volutpat. Nunc fringilla tristique aliquet.
+                Suspendisse potenti. Donec venenatis, libero eget pretium mattis, nibh ante elementum ante, vehicula auctor dui lectus quis velit. Nullam vitae sem varius, eleifend turpis eget, rutrum elit. Mauris erat nisi, accumsan in metus non, euismod pharetra ipsum. Aliquam ac nisl vel magna suscipit interdum. Nulla dictum ante id odio malesuada commodo. Maecenas accumsan accumsan turpis, feugiat consequat arcu efficitur a. Aenean ac turpis lorem. Mauris at ullamcorper enim. Pellentesque tempus consectetur laoreet. Fusce hendrerit enim ipsum, eget consectetur diam efficitur quis.
+                Integer gravida purus lacus, non consequat diam laoreet vel. Phasellus at eros nisi. Donec quis magna ipsum. Integer in augue tempor, facilisis est eget, sodales mauris. Pellentesque est lorem, mattis nec elementum sed, ultrices id magna. Vivamus ultricies vitae augue eget rhoncus. Quisque tincidunt lorem ex, eu facilisis purus mollis eu. Morbi ut imperdiet quam.
+                In ac ipsum sit amet sem rhoncus gravida quis vel orci. Sed tempor auctor metus non laoreet. Morbi tempor lorem a arcu pulvinar, id tempus dui consequat. Morbi pulvinar fermentum odio malesuada gravida. Suspendisse egestas neque non leo cursus porta sed nec ex. Morbi ultrices orci leo, commodo mattis felis cursus sit amet. Proin odio dolor, elementum sed porta sed, dapibus at est. Morbi lectus est, mattis ut ultrices vitae, iaculis commodo libero. Sed auctor est quis urna feugiat, vitae viverra tellus ultricies. Pellentesque elementum vitae est ac malesuada. Aenean aliquam tortor id arcu feugiat congue.
+            </p>
+        </div>
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+</body>
+</html>

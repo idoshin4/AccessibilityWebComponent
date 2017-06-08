@@ -1,0 +1,17 @@
+﻿p {
+    font-size: 1em;
+    transition: all ease-in-out .4s;
+    -webkit-transition: all ease-in-out .4s;
+    -moz-transition: all ease-in-out .4s;
+    -o-transition: all ease-in-out .4s;
+}
+
+    p.ac-level-1 {
+        font-size: 1.4em;
+    }
+
+    p.ac-level-2 {
+        font-size: 1.8em;
+    }
+
+

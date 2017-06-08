@@ -1,0 +1,196 @@
+﻿html {
+    -moz-transition: -moz-filter .5s ease;
+    -o-transition: -o-filter .5s ease;
+    -webkit-transition: -webkit-filter .5s ease;
+    transition: -webkit-filter .5s ease;
+}
+
+    html[data-contrast="low"] {
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        filter: grayscale(100%);
+        filter: gray;
+        -ms-filter: grayscale(100%);
+    }
+
+    html[data-contrast="high"] {
+        -webkit-filter: invert(1);
+        -moz-filter: invert(1);
+        -o-filter: invert(1);
+        -ms-filter: invert(1);
+        filter: invert(1);
+    }
+
+        html[data-contrast="high"] body {
+            background-color: #000;
+            color: #fff;
+        }
+
+            html[data-contrast="high"] body > * {
+                color: #000;
+            }
+
+    html[data-contrast="low"] body {
+        background-color: #fff;
+        color: #000;
+    }
+
+.ac-button {
+    width: 75px;
+    height: 75px;
+    background-color: #000;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    display: table;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+    .ac-button > .icon-container {
+        display: table-cell;
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+        .ac-button > .icon-container > .fa {
+            color: #fff;
+            font-size: 3em;
+        }
+
+.descrease-text {
+    pointer-events: none;
+}
+
+#ac_component.ac-container {
+    z-index: 100;
+    background-color: #000;
+    position: fixed;
+    left: -20%;
+    height: auto;
+    top: calc(10% + 75px);
+    transition: all ease-in-out .4s;
+    -webkit-transition: all ease-in-out .4s;
+    -moz-transition: all ease-in-out .4s;
+    -o-transition: all ease-in-out .4s;
+    width: auto;
+    padding: 30px;
+    max-width: 20%;
+}
+
+    #ac_component.ac-container.active {
+        left: 0;
+    }
+
+    #ac_component.ac-container > div:not(.title) {
+        height: 100px;
+        float: right;
+        display: table;
+        border: 1px solid #fff;
+        cursor: pointer;
+    }
+
+    #ac_component.ac-container > div > span {
+        text-align: right;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+        color: #fff;
+        font-size: 1.5em;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    #ac_component.ac-container > h1 {
+        font-size: 1.5em;
+    }
+
+.ac-keyboard-navigation {
+}
+
+    .ac-keyboard-navigation.active span {
+        color: #00ff21 !important;
+    }
+
+
+.ac-tooltip-layer {
+}
+
+    .ac-tooltip-layer.active span {
+        color: #00ff21 !important;
+    }
+/*************************** TOOLTIP ****************************/
+/* Tooltip container */
+.ac-tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+    /* Tooltip text */
+    .ac-tooltip .tooltiptext {
+        visibility: hidden;
+        width: auto;
+        padding: 15px;
+        background-color: #fff;
+        color: #000;
+        white-space: nowrap;
+        border: 2px solid #000;
+        text-align: center;
+        border-radius: 3px;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        font-weight: 900;
+    }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .ac-tooltip:hover .tooltiptext,
+    .ac-tooltip:focus .tooltiptext,
+    .ac-tooltip > a:focus > span.tooltiptext,
+    tooltiptext.active {
+        visibility: visible;
+    }
+
+h1.ac-tooltip > span {
+    font-size: 15px !important;
+}
+
+
+/************************* NO-TRANSITION ********************************/
+.no-transition {
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+    -moz-animation-name: none !important;
+    -webkit-animation-name: none !important;
+    -o-animation-name: none !important;
+    -ms-animation-name: none !important;
+    animation-name: none !important;
+}
+
+.ac-no-transition {
+}
+
+    .ac-no-transition.active span {
+        color: #00ff21 !important;
+    }
