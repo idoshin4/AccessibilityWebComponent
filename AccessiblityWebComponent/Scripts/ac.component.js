@@ -147,3 +147,4 @@ var Tooltip = {
         $this.removeClass('active');
     },
 };
+////////
